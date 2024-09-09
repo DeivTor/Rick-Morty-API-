@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="assets/icono morty.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Rick&Morty - DeivTor</title>
+</head>
+<header>
+    <nav>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col col-sm-11 col-md-7 col-lg-7">
+                    <nav id="navbar-custom" class="navbar navbar-expand-lg rounded-pill my-5" data-bs-theme="dark">
+                        <div class="container-fluid justify-content-center d-flex">
+                            <ul class="navbar-nav mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="character.html">Characters</a>
+                                </li>
+                                <li class="nav-item"></li>
+                                <a class="nav-link" href="location.html">Locations</a>
+                                </li>
+                            </ul>
+                            <a href="index.html">
+                                <img class="mx-5" src="assets/icono morty.svg" alt="morty">
+                            </a>
+                            <ul class="navbar-nav mb-2 mb-lg-0">
+                                <li class="nav-item"></li>
+                                <a class="nav-link" href="episode.html">Episodes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">About me</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+
+    <!--Input-->
+    <section class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-4 justify-content-center">
+                <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0"><stop id="stop1" stop-color="rgba(26.091, 83.174, 81.24, 1)" offset="0%"></stop>                            <stop id="stop2" stop-color="rgba(60, 10, 144, 1)" offset="100%"></stop></linearGradient></defs><path fill="url(#sw-gradient)" d="M25,-23.3C29.4,-20.6,27.9,-10.3,26.5,-1.3C25.2,7.6,24.1,15.3,19.7,23.3C15.3,31.3,7.6,39.8,-1.5,41.3C-10.7,42.8,-21.3,37.4,-28.5,29.4C-35.7,21.3,-39.4,10.7,-34.8,4.6C-30.2,-1.4,-17.3,-2.9,-10.1,-5.6C-2.9,-8.3,-1.4,-12.2,4.4,-16.6C10.3,-21.1,20.6,-26,25,-23.3Z" width="100%" height="100%" transform="translate(50 50)" stroke-width="0" style="transition: 0.3s;" stroke="url(#sw-gradient)"></path>
+                    <foreignObject x="10" y="10" width="80" height="80">
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="image-container">
+                            <img src="assets/place-70.png" alt="imagen" class="png-image" />
+                        </div>
+                    </foreignObject>
+                </svg>
+            </div>
+        </div>
+        <div class="input-group mb-3 pb-5 pt-0">
+            <button id="search-button" class="btn mx-3" type="button">Search</button>
+            <select id="search-input" class="form-select rounded-pill" id="inputGroupSelect03" aria-label="Example select with button addon">
+                <option selected>Find a location by its type...</option>
+                <option value="1">Acid Plant</option>
+                <option value="2">Arcade</option>
+                <option value="3">Asteroid</option>
+                <option value="4">Cluster</option>
+                <option value="5">Customs</option>
+                <option value="6">Dead Star</option>
+                <option value="7">Diegesis</option>
+                <option value="8">Dimension</option>
+                <option value="9">Dream</option>
+                <option value="10">Dwarf planet</option>
+                <option value="11">Fantasy town</option>
+                <option value="12">Game</option>
+                <option value="13">Liquid</option>
+                <option value="14">Menagerie</option>
+                <option value="15">Microverse</option>
+                <option value="16">Miniverse</option>
+                <option value="17">Planet</option>
+                <option value="18">Quadrant</option>
+                <option value="19">Quasar</option>
+                <option value="20">Resort</option>
+                <option value="21">Space station</option>
+                <option value="22">Tv</option>
+                <option value="23">Unknown</option>
+                <option value="24">Woods</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Show-Results -->
+    <section class="container">
+        <div id="show-results" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4"></div>
+    </section>
+
+
+    <!--Wave-->
+    <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 160" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(32, 28, 36, 1)" offset="0%"></stop><stop stop-color="rgba(102, 17, 243, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,48L26.7,64C53.3,80,107,112,160,114.7C213.3,117,267,91,320,77.3C373.3,64,427,64,480,77.3C533.3,91,587,117,640,125.3C693.3,133,747,123,800,122.7C853.3,123,907,133,960,133.3C1013.3,133,1067,123,1120,104C1173.3,85,1227,59,1280,42.7C1333.3,27,1387,21,1440,32C1493.3,43,1547,69,1600,77.3C1653.3,85,1707,75,1760,64C1813.3,53,1867,43,1920,42.7C1973.3,43,2027,53,2080,72C2133.3,91,2187,117,2240,112C2293.3,107,2347,69,2400,69.3C2453.3,69,2507,107,2560,109.3C2613.3,112,2667,80,2720,80C2773.3,80,2827,112,2880,128C2933.3,144,2987,144,3040,122.7C3093.3,101,3147,59,3200,53.3C3253.3,48,3307,80,3360,77.3C3413.3,75,3467,37,3520,34.7C3573.3,32,3627,64,3680,80C3733.3,96,3787,96,3813,96L3840,96L3840,160L3813.3,160C3786.7,160,3733,160,3680,160C3626.7,160,3573,160,3520,160C3466.7,160,3413,160,3360,160C3306.7,160,3253,160,3200,160C3146.7,160,3093,160,3040,160C2986.7,160,2933,160,2880,160C2826.7,160,2773,160,2720,160C2666.7,160,2613,160,2560,160C2506.7,160,2453,160,2400,160C2346.7,160,2293,160,2240,160C2186.7,160,2133,160,2080,160C2026.7,160,1973,160,1920,160C1866.7,160,1813,160,1760,160C1706.7,160,1653,160,1600,160C1546.7,160,1493,160,1440,160C1386.7,160,1333,160,1280,160C1226.7,160,1173,160,1120,160C1066.7,160,1013,160,960,160C906.7,160,853,160,800,160C746.7,160,693,160,640,160C586.7,160,533,160,480,160C426.7,160,373,160,320,160C266.7,160,213,160,160,160C106.7,160,53,160,27,160L0,160Z"></path></svg>
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!--Boostrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!--JavaScript-->
+    <script src="js/location-API.js"></script>
+</body>
+<footer>
+    <div class="container my-5">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-5 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="index.html" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                    <img src="assets/icono morty.svg" alt="">
+                </a>
+                <span class="mb-3 mb-md-0 text-white">© 2024 DeivTor</span>
+            </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a href="https://github.com/DeivTor" target="_blank"><img src="assets/github-icon.svg" alt="Github"></a></li>
+            <li class="ms-3"><a href="https://gitlab.com/DeivTor" target="_blank"><img src="assets/gitlab-icon.svg" alt="Gitlab"></a></li>
+            <li class="ms-3"><a href="https://www.instagram.com/deiver_torres011/" target="_blank"><img src="assets/instagram-icon.svg" alt=""></a></li>
+        </ul>
+        </footer>
+    </div>
+</footer>
+
+</html>
